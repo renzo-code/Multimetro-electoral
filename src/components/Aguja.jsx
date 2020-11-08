@@ -9,7 +9,10 @@ const Aguja = ({ aguja }) => {
         transform: "rotate("+ aguja + "deg)"
       }}
     >
-      <div className="aguja-principal"></div>
+      <div className="aguja-principal">
+        <div className="cabeza"></div>
+        <div className="aguja"></div>
+      </div>
       <div className="aguja-secundaria"></div>
     </div>
   )

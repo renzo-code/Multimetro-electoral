@@ -21,12 +21,12 @@ class Multimetro extends React.Component{
             en un multimetro, siendo 0 izquierda, 5 centro y 10 derecha
           </p>
           <div className="cont-rulet">
+          <RuletaElectoral/>
           </div>
           <p className="parrafo-multimetro">
             Puedes ver la calificación de cada uno de nuestros especialistas a los
             24 partidos políticos
           </p>
-          {/* <RuletaElectoral/> */}
         </div>
       </>
     )

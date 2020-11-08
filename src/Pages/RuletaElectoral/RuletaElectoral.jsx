@@ -1,21 +1,21 @@
 import React from 'react'
 import Axios from 'axios'
 
-import { servicioPromedio, servicioExpertos } from '../../constantes/index'
+import { servicioPromedio, servicioExpertos, fotosPartidos } from '../../constantes/index'
 
 import Aguja from '../../components/Aguja'
 
 import './RuletaElectoral.scss'
 
+const INITIAL_VALUE = 317
 
 class RuletaElectoral extends React.Component {
   state= {
     contentDataPromedio : [],
-    agujaPromedio: '320',
-    selectedComboBox : 0 ,
-
+    agujaPromedio: INITIAL_VALUE,
+    selectedPartido : 0 ,
     contentDataExpertos : [],
-    agujaExpertos : '320'
+    agujaExpertos : INITIAL_VALUE
   }
 
   componentDidMount(){
@@ -42,7 +42,7 @@ class RuletaElectoral extends React.Component {
       if (i !== 0) {
         formatData.push({
           partido: item[0],
-          promedio: (item[1].replace(',', '.') / 10) ,
+          promedio: (item[1].replace(',', '.') / 10).toFixed(2) ,
           id: i
         })
       }
@@ -50,9 +50,15 @@ class RuletaElectoral extends React.Component {
     return formatData
   }
 
+  convertDatosExpertos = (data) => {
+    console.log('data', data)
+    return data
+  }
+
   inputChange = (e) => {
     this.setState({
-      agujaPromedio : (80 * JSON.parse(e.target.value).promedio) + 320 ,
+      selectedPartido: JSON.parse(e.target.value),
+      agujaPromedio : (91.5 * JSON.parse(e.target.value).promedio) + INITIAL_VALUE ,
     })
   }
   
@@ -68,52 +74,53 @@ class RuletaElectoral extends React.Component {
     }
   }
 
-  // convertDatosExpertos = (val) => {
-  //   const formatDataExpertos = []
-  //   val.forEach((item,i) => {
-  //     item.forEach((obj, n)=> {
-  //       if(n === 0){
-  //         formatDataExpertos.push({
-            
-  //         })
-  //       }
-  //     }
-  //   })
-  // }
+  obtenerFoto = () => {
+    const { selectedPartido } = this.state
+
+    if (!selectedPartido) return ''
+
+    const partido = fotosPartidos.find(item => item.id === selectedPartido.id)
+
+    return partido ? partido.photo : ''
+  }
 
   render(){
-    const { contentDataPromedio, selectedComboBox, agujaPromedio, contentDataExpertos, agujaExpertos } = this.state
-    console.log('contentDataExpertos', contentDataExpertos)
+    const { contentDataPromedio, selectedPartido, agujaPromedio } = this.state
+
     return(
       <>
+      <img src="../../img/ppc.png" alt=""/>
         <div className="container-ruleta">
-          <select
-            className="comboBox-servicio-promedio"
-            onChange={this.inputChange}
-            defaultValue={selectedComboBox}
-            name="selectedComboBox"
-          >
-            {
-              contentDataPromedio.map((item, i)=> {
-                return <option key={i} value={ JSON.stringify(item) }>{item.partido}</option>
-              })
-            }
-          </select>
+          <div className="container-comboBox">
+            <p className="title-comboBox">Elige el partido político</p>
+            <select
+              className="comboBox-servicio-promedio"
+              onChange={this.inputChange}
+              defaultValue={selectedPartido}
+              name="selectedComboBox"
+            >
+              {
+                contentDataPromedio.map((item, i)=> {
+                  return <option key={i} value={ JSON.stringify(item) }>{item.partido}</option>
+                })
+              }
+            </select>
+          </div>
           <div className="multimetro"></div>
           <Aguja
             aguja={agujaPromedio}
           />
+          <div className="foto-partido">
+            <img src={this.obtenerFoto()} alt=""/>
+            <h3 className="calificacion">{selectedPartido.promedio}</h3>
+          </div>
         </div>
-
-        <div className="container-ruleta">
+        {/* <div className="container-ruleta">
           <div className="multimetro"/>
           <select>
             <option value=""></option>
           </select>
-          <Aguja
-            aguja={agujaExpertos}
-          />
-        </div>
+        </div> */}
       </>
     )
   }

@@ -7,10 +7,10 @@
 .multimetro{
   display: flex;
   margin: auto;
-  background-image: url("../../img/aguja.jpg");
+  background-image: url("../../img/multimetro.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
+  width: 300px;
   height: 275px;
 }
 
@@ -30,18 +30,37 @@
   // transform: translate(350px,0);
 }
 
-.comboBox-servicio-promedio{
-  width: 200px;
+.container-comboBox{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 320px;
+  height: 35px;
+  margin-bottom: 10px;
 }
-// display: block;
-// position: absolute;
-// left: 145px;
-// top: 33px;
-// height: 160px;
-// width: 10px;
-// background-color: #FE2934;
-// border-bottom-left-radius: 13px;
-// border-bottom-right-radius: 13px;
-// border-top-right-radius: 20px;
-// border-top-left-radius: 20px;
-// transform: rotate(-25deg);
+.title-comboBox{
+  font-size: 13px;
+  font-weight: bold;
+}
+.comboBox-servicio-promedio{
+  width: 170px;
+  height: 30px;
+  background-color: #EBEBEB;
+  border-radius: 3px;
+}
+.foto-partido {
+  display: flex;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  left: 40%;
+}
+.calificacion{
+  display: flex;
+  align-items: center;
+  color: #3A47C0;
+  padding-left: 10px;
+  font-size: 23px;
+}
