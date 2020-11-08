@@ -100,7 +100,7 @@ class RuletaElectoral extends React.Component {
               name="selectedComboBox"
             >
               {
-                contentDataPromedio.map((item, i)=> {
+                [{id: 0 , partido : "Seleccione un partido"}, ...contentDataPromedio].map((item, i)=> {
                   return <option key={i} value={ JSON.stringify(item) }>{item.partido}</option>
                 })
               }
