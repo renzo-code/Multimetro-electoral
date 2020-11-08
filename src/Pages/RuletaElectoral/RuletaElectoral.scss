@@ -7,10 +7,10 @@
 .multimetro{
   display: flex;
   margin: auto;
-  background-image: url("../../img/aguja.jpg");
+  background-image: url("../../img/multimetro.jpeg");
   background-repeat: no-repeat;
   background-size: contain;
-  width: 100%;
+  width: 300px;
   height: 275px;
 }
 
@@ -26,23 +26,17 @@
   border-bottom-right-radius: 13px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  // transform: rotate(0deg);
-  // transform: translate(350px,0);
 
 }
 
 .comboBox-servicio-promedio{
   width: 200px;
 }
-// display: block;
-// position: absolute;
-// left: 145px;
-// top: 33px;
-// height: 160px;
-// width: 10px;
-// background-color: #FE2934;
-// border-bottom-left-radius: 13px;
-// border-bottom-right-radius: 13px;
-// border-top-right-radius: 20px;
-// border-top-left-radius: 20px;
-// transform: rotate(-25deg);
+
+.foto-partido {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  left: 40%;
+}
