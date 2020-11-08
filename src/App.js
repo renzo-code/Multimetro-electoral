@@ -1,12 +1,11 @@
 import './App.css';
 
-import RuletaElectoral from './Pages/RuletaElectoral/RuletaElectoral'
+import Multimetro from './Pages/index'
 
 function App() {
   return (
     <div>
-        <RuletaElectoral/>
-        
+        <Multimetro/>
     </div>
   )
 }

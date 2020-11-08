@@ -1,0 +1,33 @@
+.container-header{
+  height: 100px;
+  width: 100%;
+  border-bottom: solid 4px #404040;
+}
+.title-multimetro{
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.parrafo-multimetro{
+  width: 620px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+.cont-rulet{
+  height: 300px;
+  width: 100%;
+}
+.parrafo-multimetro{
+  width: 34%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width : 570px) {
+  .parrafo-multimetro{
+    width: 90%;
+    transition: 1s;
+  }
+}
