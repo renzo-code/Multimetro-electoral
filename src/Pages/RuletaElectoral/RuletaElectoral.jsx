@@ -7,8 +7,8 @@ import Aguja from '../../components/Aguja'
 
 import './RuletaElectoral.scss'
 
-const INITIAL_VALUE = 317
-const INITIAL_VALUE_SECUNDARIO = 317
+const INITIAL_VALUE = 269.7
+const INITIAL_VALUE_SECUNDARIO = 269.7
 
 class RuletaElectoral extends React.Component {
   state= {
@@ -63,14 +63,14 @@ class RuletaElectoral extends React.Component {
   inputChange = (e) => {
     this.setState({
       selectedPartido: JSON.parse(e.target.value),
-      agujaPromedio : (91.5 * JSON.parse(e.target.value).promedio) + INITIAL_VALUE,
+      agujaPromedio : (180.8 * JSON.parse(e.target.value).promedio) + INITIAL_VALUE,
     })
   }
   
   comboBoxChange = (e) => {
     this.setState({
       selectedSegundoPartido : JSON.parse(e.target.value),
-      agujaPromedioSecundario : (91.5 * JSON.parse(e.target.value).promedio) + INITIAL_VALUE_SECUNDARIO,
+      agujaPromedioSecundario : (180.8 * JSON.parse(e.target.value).promedio) + INITIAL_VALUE_SECUNDARIO,
     })
   }
 
