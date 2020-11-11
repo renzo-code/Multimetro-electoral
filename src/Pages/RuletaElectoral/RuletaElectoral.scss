@@ -7,7 +7,7 @@
 .multimetro{
   display: flex;
   margin: auto;
-  background-image: url("../../img/multimetro.jpeg");
+  background-image: url("../../img/medidor.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 300px;
@@ -26,20 +26,28 @@
   border-bottom-right-radius: 13px;
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
-  // transform: rotate(0deg);
-  // transform: translate(350px,0);
 }
-
+.cont-master-comboBoxs{
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+}
 .container-comboBox{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
-  width: 320px;
   height: 35px;
   margin-bottom: 10px;
+  padding-right: 10px;
+}
+.container-segundo-comboBox{
+  display: flex;
+  align-items: center;
+  height: 35px;
 }
 .title-comboBox{
+  padding-right: 5px;
   font-size: 13px;
   font-weight: bold;
 }
@@ -48,6 +56,16 @@
   height: 30px;
   background-color: #EBEBEB;
   border-radius: 3px;
+  border-color: red;
+  outline: none;
+}
+.comboBox-segundo-servicio-promedio{
+  width: 170px;
+  height: 30px;
+  background-color: #EBEBEB;
+  border-radius: 3px;
+  border-color: blue;
+  outline: none;
 }
 .foto-partido {
   display: flex;
@@ -55,9 +73,24 @@
   width: 40px;
   height: 40px;
   bottom: 40px;
-  left: 40%;
+  left: 70%;
+}
+.foto-partido2{
+  display: flex;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: 40px;
+  left: 10%;
 }
 .calificacion{
+  display: flex;
+  align-items: center;
+  color: red;
+  padding-left: 10px;
+  font-size: 23px;
+}
+.calificacion2{
   display: flex;
   align-items: center;
   color: #3A47C0;
