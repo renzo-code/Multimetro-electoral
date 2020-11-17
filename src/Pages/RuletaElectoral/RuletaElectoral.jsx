@@ -146,14 +146,20 @@ class RuletaElectoral extends React.Component {
             bgColor="blue"
             aguja={agujaPromedioSecundario}
           />
-          <div className="foto-partido2">
-            <img src={this.obtenerFoto(selectedPartido)} alt=""/>
-            {selectedPartido !== 0 && <h3 className="calificacion">{selectedPartido.calificacion}</h3>}
-          </div>
-          <div className="foto-partido">
-            <img src={this.obtenerFoto(selectedSegundoPartido)} alt=""/>
-            {selectedSegundoPartido !== 0 && <h3 className="calificacion2">{selectedSegundoPartido.calificacion}</h3>}
-          </div>
+          { 
+            selectedPartido !== 0 &&
+            <div className="foto-partido2">
+              <img src={this.obtenerFoto(selectedPartido)} alt=""/>
+              <h3 className="calificacion">{selectedPartido.calificacion}</h3>
+            </div>
+          }
+          {
+            selectedSegundoPartido !== 0 &&
+            <div className="foto-partido">
+              <img src={this.obtenerFoto(selectedSegundoPartido)} alt=""/>
+              <h3 className="calificacion2">{selectedSegundoPartido.calificacion}</h3>
+            </div>
+          }
         </div>
         
       </>

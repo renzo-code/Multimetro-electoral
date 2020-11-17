@@ -7,7 +7,7 @@
 .multimetro{
   display: flex;
   justify-content: center;
-  margin: auto;
+  // margin: auto;
   background-image: url("../../img/medidor.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -51,6 +51,7 @@
   padding-right: 5px;
   font-size: 13px;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 .comboBox-servicio-promedio{
   width: 170px;
@@ -90,6 +91,7 @@
   color: red;
   padding-left: 10px;
   font-size: 23px;
+  font-family: 'Roboto', sans-serif;
 }
 .calificacion2{
   display: flex;
@@ -97,4 +99,37 @@
   color: #3A47C0;
   padding-left: 10px;
   font-size: 23px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media (max-width: 550px){
+  .cont-master-comboBoxs{
+    display: block;
+    width: 250px;
+    margin: 0;
+  }
+  .container-comboBox{
+    justify-content: center;
+    width: 360px;
+    padding: 0;
+  }
+  .container-segundo-comboBox{
+    justify-content: center;
+    width: 360px;
+  }
+  .multimetro{
+    margin: 0;
+    width: 350px;
+    height: 206px;
+  }
+  .container-ruleta{
+    width: 350px;
+    // margin: 0 ;
+  }
+  .foto-partido{
+    left: 195px;
+  }
+  .foto-partido2{
+    left: 65px;
+  }
 }

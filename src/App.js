@@ -4,9 +4,9 @@ import Multimetro from './Pages/index'
 
 function App() {
   return (
-    <div>
-        <Multimetro/>
-    </div>
+    <>
+      <Multimetro/>
+    </>
   )
 }
 

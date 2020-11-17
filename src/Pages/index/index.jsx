@@ -11,7 +11,7 @@ class Multimetro extends React.Component{
 
   render(){
     return(
-      <>
+      <div className="cont">
         <div className="container-header">
         </div>
         <h1 className="title-multimetro">Multímetro electoral</h1>
@@ -26,7 +26,7 @@ class Multimetro extends React.Component{
           Puedes ver la calificación de cada uno de nuestros especialistas a los
           24 partidos políticos
         </p>
-      </>
+      </div>
     )
   }
 }
