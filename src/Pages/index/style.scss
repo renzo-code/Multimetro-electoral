@@ -26,11 +26,14 @@
   font-family: 'Roboto', sans-serif;
   margin-top: 20px;
 }
-
+@media (max-width : 1240px){
+  .parrafo-multimetro{
+    width: 60%;
+  }
+}
 @media (max-width : 570px) {
   .parrafo-multimetro{
     width: 90%;
-    transition: 1s;
   }
 }
 @media (max-width: 550px){

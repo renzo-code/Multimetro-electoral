@@ -7,7 +7,7 @@
 .multimetro{
   display: flex;
   justify-content: center;
-  // margin: auto;
+  margin: 0 auto;
   background-image: url("../../img/medidor.png");
   background-repeat: no-repeat;
   background-size: contain;
@@ -102,11 +102,21 @@
   font-family: 'Roboto', sans-serif;
 }
 
+@media (max-width: 675px){
+  .cont-master-comboBoxs{
+    display: block;
+    width: 380px;
+    margin: 0 auto;
+  }
+  .container-comboBox{
+    justify-content: center;
+  }
+}
 @media (max-width: 550px){
   .cont-master-comboBoxs{
     display: block;
-    width: 250px;
-    margin: 0;
+    width: 380px;
+    margin: 0 auto;
   }
   .container-comboBox{
     justify-content: center;
