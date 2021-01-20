@@ -1,0 +1,60 @@
+.ruleta-especialista{
+  height: 500px;
+  width: 650px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.img-ruleta-especialista{
+  height: 100%;
+  width: 100%;
+}
+.comboEspecialista{
+  margin: 0 auto;
+  width: 200px;
+}
+.cont-comboBox-especialista{
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+.select-ComboEspecialista{
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 675px){
+  .select-ComboEspecialista{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    width: 300px;
+  }
+  .ruleta-especialista{
+    margin: 0 auto;
+    width: 470px;
+    height: 280px;
+  }
+  .img-ruleta-especialista{
+    width: 100%;
+    height: 100%;
+  }
+  .cont-comboBox-especialista{
+    height: 300px;
+    width: 100%;
+  }
+}
+@media (max-width : 570px){
+  .select-ComboEspecialista{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+  }
+  .ruleta-especialista{
+    width: 360px;
+    height: 270px;
+  }
+}

@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  background-image: url("../../img/medidor.png");
+  background-image: url("../../img/medidor01.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 500px;
@@ -101,6 +101,9 @@
   font-size: 23px;
   font-family: 'Roboto', sans-serif;
 }
+.style-img-width{
+  width: 40px;
+}
 
 @media (max-width: 675px){
   .cont-master-comboBoxs{
@@ -110,6 +113,9 @@
   }
   .container-comboBox{
     justify-content: center;
+  }
+  .container-segundo-comboBox{
+    justify-content: center
   }
 }
 @media (max-width: 550px){
